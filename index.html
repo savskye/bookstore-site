@@ -24,6 +24,23 @@
                 <h1>Find your next favorite bookstore.</h1>
                 <p>Independent bookstore in your area, filled by community and genre.</p>
             </section>
+
+            <section class="catalog-controls" id="catalog">
+                <div class="tab-row">
+                    <button class="tab active" data-filter="all">ALL</button>
+                    <button class="tab" data-filter="general">GENERAL</button>
+                    <button class="tab" data-filter="used">USED &amp; RARE</button>
+                    <button class="tab" data-filter="childrens">CHILDREN'S</button>
+                    <button class="tab" data-filter="specialty">SPECIALTY</button>
+                </div>
+            </section>
+
+            <section class="catalog-grid-section">
+                <div class="catalog-grid" id="catalogGrid">
+                    <!-- Bookstore cards here (add js) -->
+                </div>
+                <p class="empty-state" id="emptyState" hidden>No cards match that search.</p>
+            </section>
             
         </main>
 
