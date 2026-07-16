@@ -1,0 +1,24 @@
+:root {
+    --ink-green: #1f3a2e;
+    --paper: #f2e8d3;
+    --card: #fbf6e9;
+    --burgundy: #7a2e2e;
+    --brass: #b08d57;
+    --charcoal: #2b241c;
+
+    --font-display: Georgia, serif;
+    --font-body: Georgia, serif;
+    --font-mono: "Courier New", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--charcoal);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
