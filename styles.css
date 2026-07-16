@@ -29,9 +29,7 @@ body {
 }
 
 .site-header nav {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 20px 28px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,4 +59,33 @@ body {
 
 .nav-links a:hover {
     color: var(--brass);
+}
+
+.hero {
+    background: var(--ink-green);
+    color: var(--paper);
+    padding: 90px 0 60px;
+}
+
+.hero .wrap {
+    max-width: 640px;
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d2d2be;
+    margin: 0;
+}
+
+.wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 28px;
 }
