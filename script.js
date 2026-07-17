@@ -19,7 +19,7 @@ const bookstores = [
 
 function cardTemplate(store) {
     const tagsHTML = store.tags.map(tag => `<span class="card-tag">${tag}</span>`).join("");
-    
+
     return `
         <article class="store-card">
             <h3 class="card-name">${store.name}</h3>
@@ -32,9 +32,39 @@ function cardTemplate(store) {
 }
 
 const grid = document.getElementById("catalogGrid");
+const tabs = document.querySelectorAll(".tab");
+let activeFilter = "all";
+let activeQuery = "";
 
 function renderCards() {
-    grid.innerHTML = bookstores.map(cardTemplate).join("");
+    const filtered = bookstores.filter(store => {
+        const matchesFilter = activeFilter === "all" || store.genre === activeFilter;
+
+        const query = activeQuery.toLowerCase();
+        const matchesQuery =
+            store.name.toLowerCase().includes(query) ||
+            store.neighborhood.toLowerCase().includes(query);
+
+        return matchesFilter && matchesQuery
+    });
+
+    grid.innerHTML = filtered.map(cardTemplate).join("");
 }
 
 renderCards();
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        activeFilter = tab.dataset.filter;
+        renderCards();
+    });
+});
+
+const searchInput = document.getElementById("heroSearch");
+
+searchInput.addEventListener("input", () => {
+    activeQuery = searchInput.value;
+    renderCards();
+});
