@@ -119,6 +119,31 @@ body {
     color: var(--paper);
 }
 
+.catalog-grid-section {
+    padding: 56px 0 80px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.empty-state {
+    text-align: center;
+    font-family: var(--font-mono);
+    color: var(--charcoal);
+    padding: 60px 20px;
+}
+
+.site-footer {
+    background: var(--ink-green);
+    color: #9daa9f;
+    padding: 28px 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
 .wrap {
     max-width: 1140px;
     margin: 0 auto;
