@@ -24,3 +24,11 @@ function cardTemplate(store) {
         </article>
     `;
 }
+
+const grid = document.getElementById("catalogGrid");
+
+function renderCards() {
+    grid.innerHTML = bookstores.map(cardTemplate).join("");
+}
+
+renderCards();
