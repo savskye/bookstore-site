@@ -84,6 +84,41 @@ body {
     margin: 0;
 }
 
+.catalog-controls {
+    background: var(--card);
+    border-bottom: 1px solid rgba(43, 36, 28, 0.15);
+    padding: 22px 0;
+}
+
+.tab-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tab {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 8px 14px;
+    background: var(--paper);
+    border: 1px solid rgba(43, 36, 28, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--charcoal);
+}
+
+.tab:hover {
+    border-color: var(--burgundy);
+    color: var(--burgundy);
+}
+
+.tab.active {
+    background: var(--burgundy);
+    border-color: var(--burgundy);
+    color: var(--paper);
+}
+
 .wrap {
     max-width: 1140px;
     margin: 0 auto;
